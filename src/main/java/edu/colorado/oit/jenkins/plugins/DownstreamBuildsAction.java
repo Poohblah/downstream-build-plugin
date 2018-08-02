@@ -19,10 +19,10 @@ public class DownstreamBuildsAction implements Action {
     private RunList<Run> builds;
 
     public DownstreamBuildsAction(Run run, View view) {
-        this.builds = findDownstreamBuildss(run, view);
+        this.builds = findDownstreamBuilds(run, view);
     }
 
-    private RunList<Run> findDownstreamBuildss(Run run, View view) {
+    private RunList<Run> findDownstreamBuilds(Run run, View view) {
         RunList<Run> builds = view.getBuilds();
         return builds.filter((Run b) -> isCausedBy(b, run));
     }
