@@ -33,11 +33,11 @@ public class DownstreamBuildsAction implements Action {
             if (!(c instanceof UpstreamCause)) continue;
             Run upstream = ((UpstreamCause)c).getUpstreamRun();
             if (upstream == null) {
-              continue;
+                continue;
             } else if (upstream == parent) {
-              return true;
-            } else {
-              return isCausedBy(upstream, parent);
+                return true;
+            } else if (isCausedBy(upstream, parent)) {
+                return true;
             }
         }
         return false;
