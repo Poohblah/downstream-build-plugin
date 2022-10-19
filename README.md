@@ -22,6 +22,12 @@ To build:
 Then grab the .hpi file out of the target/ directory and upload it
 to Jenkins.  More detailed installation info available [here][wiki].
 
+Currently, this plugin only seems to build with Java 8.  Many other
+plugin maintainers reported [issues with building on Java 10/11][bug],
+and although that bug is marked as resolved, I still can't get this
+plugin to build on 10/11.
+
 [dbvp]: https://plugins.jenkins.io/downstream-buildview
 [29913]: https://issues.jenkins-ci.org/browse/JENKINS-29913
 [wiki]: https://wiki.jenkins.io/display/JENKINS/Plugin+tutorial#Plugintutorial-DistributingaPlugin
+[bug]: https://issues.jenkins.io/browse/JENKINS-52024
